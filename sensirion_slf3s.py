@@ -43,7 +43,25 @@ from base_classes import *
 
 
 class slf3s(ShdlcDeviceBase):
-    def __init__(self, connection, slave_address):
+    '''
+    '''
+    def __init__(self, connection, slave_address=0):
+        '''
+        Connect and control Sensirion SLF3S type flow sensors via the SHDLC protocol.
+
+        Parameters
+        ----------
+        connection : sensirion_shdlc_driver.ShdlcConnection
+            ShdlcConnection, e.g. ShdlcConnection('COM3'). See example code
+            
+        slave_address : int, optional
+            Slave address. The default is 0.
+
+        Returns
+        -------
+        None.
+
+        '''
         super(slf3s, self).__init__(connection, slave_address)
         self.flow_scale_factor = self.get_scale_factor()
 
@@ -62,6 +80,7 @@ class slf3s(ShdlcDeviceBase):
         ----------
         water : bool, optional
             Bool controlling whether the measured liquid is water. If false IPA calibration is used. The default is True.
+        
         sampling_rate : int, optional
             Sampling rate in ms. The default is 5.
 
@@ -99,8 +118,10 @@ class slf3s(ShdlcDeviceBase):
         -------
         flow : float
             flow rate in ul/min.
+       
         temp : float
             sensor temperature in degreesC.
+        
         flag : bool
             1: air bubble detected, 0: no air bubble detected .
 
@@ -122,12 +143,16 @@ class slf3s(ShdlcDeviceBase):
         -------
         flow_values : numpy.ndarray
             array of flow rates in ul/min.
+        
         temp_values : numpy.ndarray
             sensor temperatures in degrees C.
+        
         flag_values : numpy.ndarray
             flags, 1: air bubble detected, 0: no air bubble detected.
+        
         time_values : numpy.ndarray
             UNIX timestamps, be careful with that as these are only approximate timestamps.
+        
         lost_packages_sum : int
             Number of lost packages due to sensor buffer overflow, read buffer more frequently to prevent data loss.
 
