@@ -66,9 +66,9 @@ class slf3s(ShdlcDeviceBase):
         self.flow_scale_factor = self.get_scale_factor()
 
     def __enter__(self):
-        pass
+        return self
 
-    def __exit__(self):
+    def __exit__(self, exc_type, exc_value, traceback):
         self.stop()
 
     # start and stop measurement methods
