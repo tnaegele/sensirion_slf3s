@@ -2,7 +2,11 @@
 Python driver for Sensirion SLF3S_XXXXX type flow sensors attached to a Sensirion SCC1-USB sensor cable. These come as part of the evaluations kits such as the one for the [SLF3S-0600F](https://www.sensirion.com/products/catalog/EK-SLF3S-0600F/) sensor. The cables communicates to the host via the SHDLC (Sensirion High-Level Data Link Control) protocol.  
 
 ## Usage
-Just clone this repo and create a virtualenv which fulfils the requirements from requirements.txt. The following example code starts the sensor and prints periodically the measured values:
+Just clone this repo and create a virtualenv which fulfils the requirements from requirements.txt. 
+The API documentation can be found here: https://tnaegele.github.io/sensirion_slf3s/
+
+### Example
+The following example code starts the sensor and prints periodically the measured values:
 ~~~python
 from sensirion_slf3s import slf3s,find_sensor_port
 from sensirion_shdlc_driver import ShdlcSerialPort, ShdlcConnection
