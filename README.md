@@ -1,8 +1,13 @@
 # sensirion_slf3s
 Python driver for Sensirion SLF3S_XXXXX type flow sensors attached to a Sensirion SCC1-USB sensor cable. These come as part of the evaluations kits such as the one for the [SLF3S-0600F](https://www.sensirion.com/products/catalog/EK-SLF3S-0600F/) sensor. The cables communicate to the host via the SHDLC (Sensirion High-Level Data Link Control) protocol.  
 
-## Usage
-Just clone this repo and create a virtualenv which fulfils the requirements from requirements.txt. 
+
+## Installation
+It is recommended to create and activate a virtual environment before installation.
+~~~bash
+pip install rvm-valve
+~~~
+
 The API documentation can be found here: https://tnaegele.github.io/sensirion_slf3s/.
 
 ### Example
