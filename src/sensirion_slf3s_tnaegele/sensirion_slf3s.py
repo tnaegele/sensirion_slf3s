@@ -22,7 +22,7 @@ from struct import unpack
 import time
 import numpy as np
 from serial.tools import list_ports
-from base_classes import *
+from .base_classes import *
 
 
 class slf3s(ShdlcDeviceBase):
