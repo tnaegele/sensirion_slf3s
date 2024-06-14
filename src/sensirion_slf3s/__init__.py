@@ -1,6 +1,6 @@
 # __init__.py
 """
-sensirion_slf3s_tnaegele package
+sensirion_slf3s package
 """
 from .sensirion_slf3s import slf3s, find_sensor_port
 
