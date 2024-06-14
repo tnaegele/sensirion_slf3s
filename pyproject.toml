@@ -1,0 +1,29 @@
+[project]
+name = "sensirion_slf3s"
+version = "1.0.0"
+authors = [
+  { name="Tobias E. Naegele", email="github@tobiasnaegele.com" },
+]
+description = "Python driver for Sensirion SLF3S_XXXXX type flow sensors attached to a Sensirion SCC1-USB sensor cable. "
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+  "numpy==1.26.4",
+  "pyserial==3.5",
+  "sensirion_shdlc_driver==0.1.5"
+]
+
+[project.urls]
+Homepage = "https://github.com/tnaegele/sensirion_slf3s"
+Issues = "https://github.com/tnaegele/sensirion_slf3s/issues"
+
+[build-system]
+requires = ["setuptools>=70.0"]
+build-backend = "setuptools.build_meta"
