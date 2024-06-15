@@ -5,7 +5,7 @@ Python driver for Sensirion SLF3S_XXXXX type flow sensors attached to a Sensirio
 ## Installation
 It is recommended to create and activate a virtual environment before installation.
 ~~~bash
-pip install rvm-valve
+pip install sensirion-slf3s
 ~~~
 
 The API documentation can be found here: https://tnaegele.github.io/sensirion_slf3s/.
